@@ -17,16 +17,61 @@ class PointsCounter extends StatelessWidget {
           title: const Text('Points Counter'),
           backgroundColor: Colors.orange,
         ),
-        body: const Column(
+        body: Column(
           children: [
-            Text(
+            const Text(
               'Team A',
-              style: TextStyle(fontSize: 32),
+              style: TextStyle(fontSize: 32.0),
             ),
-            Text(
+            const Text(
               '0',
-              style: TextStyle(fontSize: 150),
+              style: TextStyle(fontSize: 150.0),
             ),
+            ElevatedButton(
+              onPressed: () {},
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.orange,
+                minimumSize: const Size(150.0, 50.0),
+              ),
+              child: const Text(
+                'Add 1 point',
+                style: TextStyle(
+                  fontSize: 18.0,
+                  color: Colors.black,
+                ),
+              ),
+            ),
+            const Spacer(flex: 1),
+            ElevatedButton(
+              onPressed: () {},
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.orange,
+                minimumSize: const Size(150.0, 50.0),
+              ),
+              child: const Text(
+                'Add 2 point',
+                style: TextStyle(
+                  fontSize: 18.0,
+                  color: Colors.black,
+                ),
+              ),
+            ),
+            const Spacer(flex: 1),
+            ElevatedButton(
+              onPressed: () {},
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.orange,
+                minimumSize: const Size(150.0, 50.0),
+              ),
+              child: const Text(
+                'Add 3 point',
+                style: TextStyle(
+                  fontSize: 18.0,
+                  color: Colors.black,
+                ),
+              ),
+            ),
+            const Spacer(flex: 12)
           ],
         ),
       ),
