@@ -4,15 +4,21 @@ void main() {
   runApp(PointsCounter());
 }
 
-class PointsCounter extends StatelessWidget {
+class PointsCounter extends StatefulWidget {
+  PointsCounter({super.key});
+
+  @override
+  State<PointsCounter> createState() => _PointsCounterState();
+}
+
+class _PointsCounterState extends State<PointsCounter> {
   int teamAPoints = 0;
+
   int teamBPoints = 0;
 
   void addOnePointToTeamA() {
     debugPrint('Add 1 point to Team A');
   }
-
-  PointsCounter({super.key});
 
   @override
   Widget build(BuildContext context) {
