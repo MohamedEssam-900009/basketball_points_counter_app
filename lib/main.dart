@@ -1,11 +1,18 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const PointsCounter());
+  runApp(PointsCounter());
 }
 
 class PointsCounter extends StatelessWidget {
-  const PointsCounter({super.key});
+  int teamAPoints = 0;
+  int teamBPoints = 0;
+
+  void addOnePointToTeamA() {
+    debugPrint('Add 1 point to Team A');
+  }
+
+  PointsCounter({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -29,12 +36,15 @@ class PointsCounter extends StatelessWidget {
                       'Team A',
                       style: TextStyle(fontSize: 42.0),
                     ),
-                    const Text(
-                      '0',
-                      style: TextStyle(fontSize: 150.0),
+                    Text(
+                      '$teamAPoints',
+                      style: const TextStyle(fontSize: 150.0),
                     ),
                     ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        teamAPoints++;
+                        debugPrint(teamAPoints.toString());
+                      },
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.orange,
                         minimumSize: const Size(150.0, 50.0),
@@ -92,9 +102,9 @@ class PointsCounter extends StatelessWidget {
                       'Team B',
                       style: TextStyle(fontSize: 42.0),
                     ),
-                    const Text(
-                      '0',
-                      style: TextStyle(fontSize: 150.0),
+                    Text(
+                      '$teamBPoints',
+                      style: const TextStyle(fontSize: 150.0),
                     ),
                     ElevatedButton(
                       onPressed: () {},
